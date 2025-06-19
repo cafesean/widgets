@@ -1,0 +1,153 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+main {
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+hr {
+    margin: 2rem 0;
+}
+
+.widget-list, .designer-area {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    /* flex-wrap: wrap; /* Allow wrapping if screen is too small */
+}
+
+.toolbar { /* width: 200px; */ /* Already defined */ }
+.canvas-container { flex-grow: 1; /* Already defined */ }
+
+.sidebar {
+    width: 280px; /* Fixed width for the new sidebar */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.properties-editor {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    /* width: 250px; */ /* Remove fixed width, it's now part of sidebar */
+    flex-shrink: 0; /* Prevent shrinking if content is large */
+}
+
+.theme-selector {
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+
+.theme-selector h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.theme-selector select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.code-view-container {
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* Add to the end of frontend/css/style.css */
+
+.selected-element {
+    outline: 2px solid blue !important; /* Ensure it overrides other outlines */
+}
+
+.canvas div,
+.canvas button,
+.canvas input,
+.canvas label,
+.canvas p /* Target p tags only inside canvas if they are part of widget */ {
+    border: 1px dashed #666;
+    padding: 0.25rem;
+    background-color: #fff; /* Give elements a background to distinguish from canvas bg */
+    margin-bottom: 5px; /* Add some spacing */
+}
+
+/* Style for buttons inside widget list items */
+.widget-list li button {
+    margin-left: 10px;
+    padding: 0.2em 0.5em;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.widget-list ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.widget-list li {
+    padding: 0.5em;
+    border-bottom: 1px solid #eee;
+}
+
+.widget-list li:last-child {
+    border-bottom: none;
+}
+
+/* styles.css */
+/* ... (previous styles) ... */
+
+.properties-editor div {
+    margin-bottom: 0.5rem;
+}
+
+.properties-editor label {
+    display: inline-block;
+    width: 100px; /* Adjust as needed */
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+
+.properties-editor input[type="text"] {
+    width: calc(100% - 120px); /* Adjust based on label width */
+    padding: 0.3rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.properties-editor h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.1em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
